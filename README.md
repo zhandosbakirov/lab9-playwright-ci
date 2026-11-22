@@ -30,3 +30,6 @@ python -m pytest -v --browser chromium --screenshot only-on-failure --tracing re
 4. От исправной версии создайте отдельную ветку, внесите небольшое изменение в README и откройте pull request. В Actions проверьте запуск с событием `pull_request`, в PR откройте **Checks**.
 
 На странице каждого запуска в **Artifacts** доступен архив **ui-test-results**, если шаг загрузки выполнился. В нём `report.xml` содержит результаты тестов, `server.log` — запросы к форме. При падениях в `test-results/` сохраняются снимки экранов и трассировки. Трассировку можно открыть командой `python -m playwright show-trace путь/к/trace.zip`.
+
+
+При открытии pull request GitHub Actions проверяет все 12 сценариев формы доставки.
